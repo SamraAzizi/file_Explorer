@@ -34,6 +34,3 @@ The `main()` function initializes the Tkinter application and creates an instanc
 - Python 3.x
 - Tkinter (standard Python library)
 
-## License
-
-This code is licensed under the MIT License. See the LICENSE file
