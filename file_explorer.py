@@ -28,3 +28,18 @@ class FileExplorer:
                     self.tree.insert(parent_node, "end", text=path)
         except PermissionError:
             pass
+    
+    def on_tree_open(self, event):
+        node = self.tree.focus()
+        path = self.tree.item(node, "text")
+        if self.tree.get_children(node):
+            return
+        self.populate_tree(path)
+
+def main():
+    root = tk.Tk()
+    app = FileExplorer(root)
+    root.mainloop()
+
+if __name__ == "__main__":
+    main()
